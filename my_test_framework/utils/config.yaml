@@ -1,0 +1,67 @@
+# This file has been created to contain all the test data to be used for testing
+# This way, it would be easier to modify test data such as urls, usernames, passwords, and browsers to be used
+# They are in one place and I don't have to modify them in the tests
+
+# Test data for user credential to be used for log in
+credentials:
+  # Valid username and password
+  username: "standard_user"
+  password: "secret_sauce"
+  # Invalid username and password
+  wrong_username: "redenmar"
+  wrong_password: "redenmarpass"
+
+# The base url of the demo site for this project
+base_url: "https://www.saucedemo.com/"
+inventory_url: "https://www.saucedemo.com/inventory.html"
+
+# The browsers and their corresponding webdrivers
+# Modify the browser name below and uncomment the corresponding webdriver locations
+browser:
+  type: "chrome" # The browser type options: "chrome", "firefox", "edge"
+  drivers:
+    chrome: "webdrivers/chromedriver.exe"
+    firefox: "webdrivers/geckodriver.exe"
+    edge: "webdrivers/msedgedriver.exe"
+
+# Locators with their types and values
+locators:
+  # Locators for the Login Page
+  login_page:
+    # For username input box
+    username_input:
+      type: "id"
+      value: "user-name"
+    # For password input box
+    password_input:
+      type: "id"
+      value: "password"
+    # For login button
+    login_button:
+      type: "id"
+      value: "login-button"
+    # For error message
+    error_message:
+      type: "css"
+      value: ".error-message-container" 
+
+  # Locators for the Home Page
+  home_page:
+    # For the menu button
+    menu_button:
+      type: "id"
+      value: "react-burger-menu-btn"
+    # For the logout button
+    logout_button:
+      type: "id"
+      value: "logout_sidebar_link"
+
+# The error messages per scenario
+error_messages:
+  login_page:
+    # For username not filled out
+    username_required: "Epic sadface: Username is required"
+    # For password not filled out
+    password_required: "Epic sadface: Password is required"
+    # For incorrect username and password at the same time
+    invalid_credentials: "Epic sadface: Username and password do not match any user in this service"
