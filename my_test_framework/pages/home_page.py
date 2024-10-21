@@ -22,3 +22,9 @@ class HomePage(BasePage):
         self.open_menu()
         wait_for_element(self.driver, self.LOGOUT_BUTTON)
         self.click_element(self.LOGOUT_BUTTON)
+
+class AddToCart(BasePage):
+    ADD_TO_CART_BUTTON = get_locator(config['locators']['home_page']['add_to_cart_button'])
+
+    def add_to_cart(self):
+        self.click_element(self.ADD_TO_CART_BUTTON)

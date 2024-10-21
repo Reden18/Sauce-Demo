@@ -55,6 +55,9 @@ locators:
     logout_button:
       type: "id"
       value: "logout_sidebar_link"
+    add_to_cart_button:
+      type: "id"
+      value: "add-to-cart-sauce-labs-backpack"
 
 # The error messages per scenario
 error_messages:
